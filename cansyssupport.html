@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Support - Assessment Platform</title>
+    <link rel="stylesheet" href="cansyssupport.css">
+</head>
+<body>
+    <div class="background"></div>
+<div class="support-page">
+    <header>
+        <div class="circle-image-container">
+            <img src="careerfitlogo.jpeg" alt="Elevate Your Career">
+        </div>
+        <h1>Technical Support</h1>
+        <p>Need help with your assessment? We're here to assist you!</p>
+    </header>
+    <div class="support-container">
+        <section class="contact-form">
+            <h2>Contact Us</h2>
+            <form id="supportForm">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+                <label for="issue">Issue Type:</label>
+                <select id="issue" required>
+                    <option value="login">Login Issues</option>
+                    <option value="proctoring">Proctoring Issues</option>
+                    <option value="grading">Grading Issues</option>
+                    <option value="system-check">System Compatibility</option>
+                    <option value="other">Other</option>
+                </select>
+                <label for="message">Describe Your Issue:</label>
+                <textarea id="message" placeholder="Describe your issue here..." required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+        <section class="faq">
+            <h2>Frequently Asked Questions (FAQs)</h2>
+            <div class="faq-item">
+                <h3>How do I check my system compatibility?</h3>
+                <p>Click the "System Check" button on the assessment platform's home page to ensure your system meets the requirements for the test.</p>
+            </div>
+            <div class="faq-item">
+                <h3>What should I do if I cannot access the camera or microphone?</h3>
+                <p>Ensure you have allowed permissions for both the camera and microphone in your browser settings. Try restarting the browser and reloading the platform.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Why did my test submission fail?</h3>
+                <p>Check your internet connection during submission. If the problem persists, please contact our support team through the form above.</p>
+            </div>
+        </section>
+        <section class="live-chat">
+            <h2>Live Chat Support</h2>
+            <p>If you need instant help, use our live chat feature to talk directly with a support agent.</p>
+            <button class="chat-button">Start Live Chat</button>
+        </section>
+        <p class="back"><a href="candidatedashboard.html">Go To Dashboard</a></p>
+    </div>
+</div>
+</body>
+</html>

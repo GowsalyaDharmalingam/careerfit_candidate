@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Assessment</title>
+    <link rel="stylesheet" href="cansubmit.css">
+</head>
+<body>
+    <div class="background"></div>
+    <div class="container">
+        <div class="circle-image-container">
+            <img src="careerfitlogo.jpeg" alt="Elevate Your Career">
+        </div>
+        <div class="confirmation-dialog">
+            <h2>Are you sure you want to submit your assessment?</h2>
+            <p>You won't be able to change your answers after submission.</p>
+            <div class="button-group">
+                <button class="review-button" id="review-btn">Review Answers</button>
+                <button class="submit-button" id="submit-btn"><p class="result"><a href="canresult.html">Submit</a></p></button>
+            </div>
+        </div>
+        <div class="review-section" id="review-section" style="display: none;">
+            <h3><p class="review"><a href="canreview.html">Review Your Answers</a></p></h3>
+            <p>Here you can review all your answers before submission.</p>
+            <button class="back-button" id="back-btn">Back to Submit</button>
+        </div>
+    </div>
+    <script>
+        document.getElementById('review-btn').addEventListener('click', function() {
+            document.querySelector('.confirmation-dialog').style.display = 'none';
+            document.getElementById('review-section').style.display = 'block';
+        });
+            document.getElementById('back-btn').addEventListener('click', function() {
+            document.getElementById('review-section').style.display = 'none';
+            document.querySelector('.confirmation-dialog').style.display = 'block';
+        });
+        document.getElementById('submit-btn').addEventListener('click', function() {
+            alert('Assessment Submitted!');
+        });
+    </script>
+</body>
+</html>

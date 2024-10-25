@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment Results</title>
+    <link rel="stylesheet" href="canresult.css">
+</head>
+<body>
+    <div class="background"></div>
+    <div class="results-container">
+        <div class="circle-image-container">
+            <img src="careerfitlogo.jpeg" alt="Elevate Your Career">
+        </div>
+        <h1>Recent Assessment Results</h1>
+        <div class="result-item">
+            <div class="result-header">
+                <p class="assessment-name">Assessment 1</p>
+                <p class="assessment-score">Score: 85%</p>
+                <p class="assessment-status">Status: Passed</p>
+            </div>
+            <button class="view-details-btn"><p class="result"><a href="candetres.html">View Detailed Results</a></p></button>
+            <div class="action-buttons">
+                <button onclick="window.print()">Print Results</button>
+                <button onclick="downloadResults()">Download Results</button>
+            </div>
+        </div>
+        <div class="result-item">
+            <div class="result-header">
+                <p class="assessment-name">Assessment 2</p>
+                <p class="assessment-score">Score: 72%</p>
+                <p class="assessment-status">Status: Passed</p>
+            </div>
+            <button class="view-details-btn"><p class="result"><a href="candetres.html">View Detailed Results</a></p></button>
+            <div class="action-buttons">
+                <button onclick="window.print()">Print Results</button>
+                <button onclick="downloadResults()">Download Results</button>
+            </div>
+        </div>
+<p class="back"><a href="candidatedashboard.html">Back</a></p>
+</div>
+    <script>
+        function downloadResults() {
+            const element = document.createElement('a');
+            const file = new Blob(['Assessment Results'], {type: 'text/plain'});
+            element.href = URL.createObjectURL(file);
+            element.download = 'assessment_results.txt';
+            document.body.appendChild(element);
+            element.click();
+        }
+    </script>
+</body>
+</html>

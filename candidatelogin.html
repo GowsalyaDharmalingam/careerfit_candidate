@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="candidatelogin.css">
+</head>
+<body>
+    <div class="background"></div>
+    <div class="login-container">
+        <div class="circle-image-container">
+            <img src="careerfitlogo.jpeg" alt="Elevate Your Career">
+        </div>
+                <h2>LOGIN</h2>
+        <form action="login_action" method="POST">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter username/EmailID" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter Your Password" required>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="remember-me" name="remember-me">
+                <label for="remember-me">Remember Me</label>
+            </div>
+            <div class="forgot-password">
+                <a href="candidateforgot.html">Forgot Password?</a>
+            </div>
+            <button type="submit" class="login-btn"><p class="login"><a href="candidatedashboard.html">Login</a></p></button>
+            <p class="register-link">Don't have an account? <a href="candidatesignup.html">Create Account</a></p>
+        </form>
+    </div>
+</body>
+</html>

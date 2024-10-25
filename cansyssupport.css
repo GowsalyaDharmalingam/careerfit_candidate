@@ -1,0 +1,149 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+.support-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+h1 {
+    font-size: 36px;
+    color: #720098;
+}
+header p {
+    font-size: 18px;
+    color:#720098;
+}
+.support-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+}
+.contact-form {
+    color: white;
+    background-color:#720098;
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.contact-form h2 {
+    color: #720098;
+    margin-bottom: 20px;
+}
+.contact-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: inherit;
+}
+.contact-form button {
+    background-color: red;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.contact-form button:hover {
+    background-color: rgb(165, 61, 61);
+}
+.faq {
+    background-color: #720098;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.faq h2 {
+    color:white;
+    margin-bottom: 20px;
+}
+.faq-item {
+    margin-bottom: 20px;
+}
+.faq-item h3 {
+    font-size: 18px;
+    color:red;
+    margin-bottom: 8px;
+}
+.faq-item p {
+    color:whitesmoke;
+    font-size: 16px;
+    line-height: 1.6;
+}
+.live-chat {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    grid-column: span 2;
+    text-align: center;
+}
+.live-chat h2 {
+    color: #720098;
+    margin-bottom: 20px;
+}
+.live-chat p {
+    color: #666;
+    margin-bottom: 20px;
+}
+.chat-button {
+    background-color: #720098;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.chat-button:hover {
+    background-color: #7f3f94;
+}
+@media (max-width: 768px) {
+    .support-container {
+        grid-template-columns: 1fr;
+    }
+}
+.circle-image-container {
+    float: right;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.circle-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+.background {
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('background.jpg'); /* Replace with your image */
+    background-size: cover;
+    filter: blur(8px); /* Adjust blur intensity */
+    z-index: -1; /* Send background behind content */
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proctoring Check</title>
+    <link rel="stylesheet" href="canprocpage.css">
+</head>
+<body>
+    <div class="background"></div>
+    <div class="container">
+        <div class="circle-image-container">
+            <img src="careerfitlogo.jpeg" alt="Elevate Your Career">
+        </div>
+        <section class="info-section">
+            <h1>AI Proctoring Notification</h1>
+            <p>For this assessment, AI proctoring will be used to monitor your activity. This includes tracking your camera, microphone, and screen to ensure a fair assessment environment.</p>
+            <p>By proceeding, you acknowledge that the proctoring system will be active throughout the duration of the exam.</p>
+        </section>
+        <section class="action-section">
+            <button onclick="proceedToAssessment()" class="proceed-button"><p class="Proceed"><a href="canprepage.html">Proceed to Assessment</a></p></button>
+        </section>
+    </div>
+    <script>
+    function proceedToAssessment() {
+            window.location.href = "assessment.html";
+        }
+    </script>
+</body>
+</html>

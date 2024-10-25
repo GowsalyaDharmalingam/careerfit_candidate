@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 90%;
+    max-width: 700px;
+    margin: 50px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+.info-section h1 {
+    color: #520a89;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.info-section p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+.action-section {
+    text-align: center;
+    margin-top: 30px;
+}
+.proceed-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.proceed-button:hover {
+    background-color: #45a049;
+}
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .proceed-button {
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+}
+.Proceed a{
+    text-decoration: none;
+}
+.Proceed a:hover{
+    text-decoration: dotted;
+    color: #720098;
+}
+.circle-image-container {
+    float:right;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.circle-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+.background {
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('background.jpg'); /* Replace with your image */
+    background-size: cover;
+    filter: blur(8px); /* Adjust blur intensity */
+    z-index: -1; /* Send background behind content */
+}

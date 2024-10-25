@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Check Page</title>
+    <link rel="stylesheet" href="cansystemcheck.css">
+</head>
+<body>
+    <div class="background"></div>
+    <section id="system-check" class="section">
+        <div class="container">
+            <div class="circle-image-container">
+                <img src="careerfitlogo.jpeg" alt="Elevate Your Career">
+            </div>
+            <h2><bold>System Check</bold></h2>
+            <div class="instructions">
+                <h3>Follow these steps to ensure your system is ready:</h3>
+                <ul>
+                    <li><i class="icon">&#128187;</i> Ensure you have a stable internet connection.</li>
+                    <li><i class="icon">&#128247;</i> Allow access to your camera for the exam.</li>
+                    <li><i class="icon">&#127897;</i> Allow access to your microphone for audio checks.</li>
+                </ul>
+            </div>
+            <div class="diagnostic">
+                <button id="run-diagnostic" required>Run Diagnostic</button>
+            </div>
+            <div class="status-indicators">
+                <div class="status-item">
+                    <span>Internet Speed:</span>
+                    <span class="status" id="internet-status">Pending</span>
+                </div>
+                <div class="status-item">
+                    <span>Camera:</span>
+                    <span class="status" id="camera-status">Pending</span>
+                </div>
+                <div class="status-item">
+                    <span>Microphone:</span>
+                    <span class="status" id="microphone-status">Pending</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <p class="back"><a href="canprepage.html">Back</a></p>
+    <script src="cansystemcheck.js"></script>
+</body>
+</html>

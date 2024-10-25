@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Settings</title>
+    <link rel="stylesheet" href="canprofileset.css">
+</head>
+<body>
+    <div class="background"></div>
+    <div class="profile-settings">
+    <header>
+        <div class="circle-image-container">
+            <img src="careerfitlogo.jpeg" alt="Elevate Your Career">
+        </div>
+        <h1>Profile Settings</h1>
+    </header>
+    <div class="profile-container">
+        <div class="profile-pic-section">
+            <img id="profilePic" src="default-profile.jpg" alt="Profile Picture">
+            <input type="file" id="uploadBtn" accept="image/*" onchange="previewImage(event)">
+            <label for="uploadBtn" class="upload-label">Change Profile Picture</label>
+        </div>
+        <div class="profile-info">
+            <form id="profileForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" value="Username">
+                <label for="email">Email:</label>
+                <input type="email" id="email" value="careerfit@gamil.com" readonly>
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" value="+91 9876543210" readonly>
+                <label for="tagline">Tagline:</label>
+                <input type="text" id="tagline" value="Web Developer | Tech Enthusiast | Lifelong Learner">
+                <label for="aboutMe">About Me:</label>
+                <textarea id="aboutMe">I'm a passionate web developer with 3 years of experience in building responsive and user-friendly websites. I love to work with modern web technologies and enjoy learning new things.</textarea>
+               <label for="skills">Skills:</label>
+                <input type="text" id="skills" value="HTML & CSS, JavaScript, React.js, Node.js">
+                <button type="button" onclick="saveProfile()">Save</button>
+            </form>
+            <p class="back"><a href="candidatedashboard.html">Go To Dashboard</a></p>
+        </div>
+    </div>
+</div>
+<script src="canprofileset.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pre-Assessment Instructions</title>
+    <link rel="stylesheet" href="canprepage.css">
+</head>
+<body>
+    <div class="background"></div>
+    <div class="container">
+        <header> <div class="circle-image-container">
+            <img src="careerfitlogo.jpeg" alt="Elevate Your Career">
+        </div>
+            <h1>Pre-Assessment Instructions</h1>
+        </header>
+        <section class="instructions">
+            <h2>Guidelines for the Assessment</h2>
+            <ol>
+                <li>Ensure that your device is compatible and passes the system check before starting the assessment.</li>
+                <li>Keep your identification proof handy for verification if required.</li>
+                <li>Do not refresh or close the browser during the test. This could lead to disqualification.</li>
+                <li>The test is timed. Make sure to keep track of the timer during the assessment.</li>
+                <li>Use a stable internet connection to avoid disruptions.</li>
+                <li>Follow all instructions carefully and do not engage in any malpractice.</li>
+            </ol>
+        </section>
+        <section class="action-buttons">
+            <button onclick="startAssessment()" class="start-button"><p class="start"><a href="canmonitor.html">Start Assessment</a></p></button>
+            <button onclick="downloadInstructions()" class="download-button">Download Instructions</button>
+            <button onclick="window.print()" class="print-button">Print Instructions</button>
+        </section>
+    </div>
+    <div class="system-check-container">
+        <h2>System Check</h2>
+        <p>Ensure your system is ready for the assessment by running a quick diagnostic.</p>
+        <a href="cansystemcheck.html" class="system-check-button">Run System Check</a>
+    </div>
+    <script>
+    function startAssessment() {
+            window.location.href = "assessment.html";
+        }
+        function downloadInstructions() {
+            const element = document.createElement('a');
+            const file = new Blob([document.querySelector('.instructions').innerText], { type: 'text/plain' });
+            element.href = URL.createObjectURL(file);
+            element.download = "Assessment_Instructions.txt";
+            document.body.appendChild(element);
+            element.click();
+        }
+    </script>
+</body>
+</html>

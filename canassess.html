@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment Interface</title>
+    <link rel="stylesheet" href="canassess.css">
+    <div class="background"></div>
+    <div class="content">
+    </div>
+</head>
+<body>
+    <div class="container">
+        <div class="circle-image-container">
+            <img src="careerfitlogo.jpeg" alt="Elevate Your Career">
+        </div>
+        <div class="timer">
+            Time Remaining: <span id="time">60:00</span>
+        </div>
+        <section class="question-section">
+            <h2>Question <span id="question-number">1</span>:</h2>
+            <p id="question-text">What is the capital of France?</p>
+            <div class="answer-section">
+                <label for="answer">Your Answer:</label>
+                <input type="text" id="answer" placeholder="Type your answer here...">
+            </div>
+        </section>
+        <div class="navigation-buttons">
+            <button class="nav-button" id="previous-btn" disabled>Previous</button>
+            <button class="nav-button" id="next-btn">Next</button>
+        </div>
+        <div class="submit-section">
+            <button class="submit-button" id="submit-btn"><p class="submit"><a href="cansubmit.html">Submit</a></p></button>
+        </div>
+    </div>
+    <script>
+        let time = 3600;
+        const timerDisplay = document.getElementById('time');
+        function startTimer() {
+            const interval = setInterval(() => {
+                const minutes = Math.floor(time / 60);
+                const seconds = time % 60;
+                timerDisplay.innerText = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+                time--;
+                if (time < 0) {
+                    clearInterval(interval);
+                    alert("Time's up! Submitting your assessment.");
+                    document.getElementById('submit-btn').click();
+                }
+            }, 1000);
+        }
+        window.onload = startTimer;
+        const questions = [
+            "What is the capital of France?",
+            "What is the largest planet in our solar system?",
+            "Who wrote 'Hamlet'?",
+            "What is the boiling point of water in Celsius?",
+            "What is the speed of light?"
+        ];
+        let currentQuestion = 0;
+        const questionText = document.getElementById('question-text');
+        const questionNumber = document.getElementById('question-number');
+        const answerInput = document.getElementById('answer');
+        const nextBtn = document.getElementById('next-btn');
+        const prevBtn = document.getElementById('previous-btn');
+        function updateQuestion() {
+            questionText.innerText = questions[currentQuestion];
+            questionNumber.innerText = currentQuestion + 1;
+            answerInput.value = '';
+            prevBtn.disabled = currentQuestion === 0;
+            nextBtn.disabled = currentQuestion === questions.length - 1;
+        }
+        nextBtn.addEventListener('click', () => {
+            if (currentQuestion < questions.length - 1) {
+                currentQuestion++;
+                updateQuestion();
+            }
+        });
+        prevBtn.addEventListener('click', () => {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                updateQuestion();
+            }
+        });
+        updateQuestion();
+    </script>
+</body>
+</html>
